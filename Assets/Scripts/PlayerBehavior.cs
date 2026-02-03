@@ -1,26 +1,43 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//whatever bro
+//follow the way the sprites folder to make it easier 
+
+
 
 public class PlayerBehavior : MonoBehaviour{
     public float speed;
-    public GameObject ball;
     private GameObject currentball;
     public float offY  = -0.6f;
+
+    public int[] numbers;
+
+    public GameObject[] balls;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
-        
+
+        // for (int  i=0 l; i < numbers.length; if++){
+        //     print(numbers[i]);
+        // }
     }
+
+    //int choice =  
 
     // Update is called once per frame
     void Update(){
+        //int choice  = Random.Range(27, 60);
+        //print (choice)
+
+
         if(currentball != null){
             Vector3 playerPos = transform.position;
             Vector3 ballOffset = new Vector3(0.0f, offY, 0.0f);
-            ball.transform.position = playerPos + ballOffset;
+            currentball.transform.position = playerPos + ballOffset;
         }
         else{
-            currentball  = Instantiate(ball, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
+            int choice = Random.Range(0, balls.Length);
+            currentball  = Instantiate(balls[choice], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         }
 
         if(Keyboard.current.spaceKey.wasPressedThisFrame){
@@ -45,5 +62,6 @@ public class PlayerBehavior : MonoBehaviour{
 
         Vector3 newPos = transform.position;
         newPos.x = newPos.x + offset;
+        transform.position = newPos;
     }
 }
