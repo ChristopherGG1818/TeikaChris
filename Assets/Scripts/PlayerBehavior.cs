@@ -17,6 +17,9 @@ public class PlayerBehavior : MonoBehaviour{
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
 
+        // float currentTime = Time.time;
+        // print(currentTime);
+
         // for (int  i=0 l; i < numbers.length; if++){
         //     print(numbers[i]);
         // }
@@ -26,6 +29,10 @@ public class PlayerBehavior : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+
+
+        // float currentTime = Time.time;
+        // print(currentTime);
         //int choice  = Random.Range(27, 60);
         //print (choice)
 
@@ -63,8 +70,9 @@ public class PlayerBehavior : MonoBehaviour{
         Vector3 newPos = transform.position;
         newPos.x = newPos.x + offset;
         
-
+        //float startTime = 0.0f;
         if(transform.position.x > max){
+            //startTime  = Time.time;
             newPos.x = max;
         }
         transform.position = newPos;
