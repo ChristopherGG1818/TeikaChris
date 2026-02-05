@@ -10,8 +10,8 @@ public class PlayerBehavior : MonoBehaviour{
     public float speed;
     private GameObject currentball;
     public float offY  = -0.6f;
-
-    public int[] numbers;
+    public float min; 
+    public float max;
 
     public GameObject[] balls;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -62,6 +62,17 @@ public class PlayerBehavior : MonoBehaviour{
 
         Vector3 newPos = transform.position;
         newPos.x = newPos.x + offset;
+        
+
+        if(transform.position.x > max){
+            newPos.x = max;
+        }
+        transform.position = newPos;
+
+
+        if(transform.position.x < min){
+            newPos.x = min;
+        }
         transform.position = newPos;
     }
 }
