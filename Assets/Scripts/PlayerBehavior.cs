@@ -4,38 +4,25 @@ using UnityEngine.InputSystem;
 //whatever bro
 //follow the way the sprites folder to make it easier 
 
-
-
 public class PlayerBehavior : MonoBehaviour{
     public float speed;
     private GameObject currentball;
     public float offY  = -0.6f;
     public float min; 
     public float max;
+    public int move;
 
     public GameObject[] balls;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
 
-        // float currentTime = Time.time;
-        // print(currentTime);
-
-        // for (int  i=0 l; i < numbers.length; if++){
-        //     print(numbers[i]);
-        // }
+        move =0; // 0 means you can move both ways
     }
 
     //int choice =  
 
     // Update is called once per frame
     void Update(){
-
-
-        // float currentTime = Time.time;
-        // print(currentTime);
-        //int choice  = Random.Range(27, 60);
-        //print (choice)
-
 
         if(currentball != null){
             Vector3 playerPos = transform.position;
@@ -59,7 +46,8 @@ public class PlayerBehavior : MonoBehaviour{
 
         //keyboard movement of player
         float offset = 0.0f;
-        if(Keyboard.current.leftArrowKey.isPressed|| Keyboard.current.aKey.isPressed){
+        bool left = (Keyboard.current.leftArrowKey.isPressed|| Keyboard.current.aKey.isPressed) && move != 1;
+        if(left == true){
             offset = -speed;
         }
 
@@ -82,5 +70,26 @@ public class PlayerBehavior : MonoBehaviour{
             newPos.x = min;
         }
         transform.position = newPos;
+
+
     }
+    private void OnCollisionEnter2D(Collision2D other){
+    print("you touched " + other.gameObject.name);
+    if (other.gameObject.CompareTag("LB")){
+            move = 1; // cannot move left
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other){
+    print("you are touching " + other.gameObject.name);
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+    print("you stopped " + other.gameObject.name);
+    if (other.gameObject.CompareTag("LB")){
+        move = 0; // can move left again
+        }
+    }
+
+
 }

@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Baseball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
+      propertyPath: m_TagString
+      value: fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -65,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6305224485118502247}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1654271051753375331}
   m_SourcePrefab: {fileID: 100100000, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
 --- !u!1 &3346929518256024221 stripped
 GameObject:
@@ -193,3 +200,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.60999995
+--- !u!114 &-1654271051753375331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3346929518256024221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba71e07037c934d259579d11edb0657d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SportBehavior
+  timeout: 3

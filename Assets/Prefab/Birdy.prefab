@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Birdy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
+      propertyPath: m_TagString
+      value: fruit
+      objectReference: {fileID: 0}
     - target: {fileID: 3074921751109605677, guid: 86ae7de409eb54f619fb1328e4d42480, type: 3}
       propertyPath: m_ShapeTexture
       value: 
@@ -107,6 +111,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3675745778110852832}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4096491465008272398}
   m_SourcePrefab: {fileID: 100100000, guid: 1c7762c9bce5f4ab7b060decb9e3002d, type: 3}
 --- !u!1 &8776855583694473843 stripped
 GameObject:
@@ -172,3 +179,16 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &4096491465008272398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8776855583694473843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba71e07037c934d259579d11edb0657d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SportBehavior
+  timeout: 3
