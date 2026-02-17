@@ -17,9 +17,7 @@ public class PlayerBehavior : MonoBehaviour{
     void Start(){
 
         move =0; // 0 means you can move both ways
-    }
-
-    //int choice =  
+    } 
 
     // Update is called once per frame
     void Update(){
@@ -84,12 +82,11 @@ public class PlayerBehavior : MonoBehaviour{
     print("you are touching " + other.gameObject.name);
     }
 
+
     private void OnCollisionExit2D(Collision2D other) {
     print("you stopped " + other.gameObject.name);
     if (other.gameObject.CompareTag("LB")){
         move = 0; // can move left again
         }
     }
-
-
 }
