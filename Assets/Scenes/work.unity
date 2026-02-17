@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8951469879151057714, guid: 23100264a286144cbb349833d742d03e, type: 3}
+      propertyPath: ballType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1551821215487527857, guid: 23100264a286144cbb349833d742d03e, type: 3}
       propertyPath: m_Radius
       value: 0.55096924
@@ -1576,6 +1580,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 394c49199ec034f6db0c4a0a7ec01a25, type: 2}
+    - target: {fileID: 8266255224408841903, guid: 35540d4c6cfa3436384893bcdf8d4c26, type: 3}
+      propertyPath: ballType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1700,10 +1708,11 @@ MonoBehaviour:
   balls:
   - {fileID: 4009997439614742924}
   - {fileID: 4257565532067607067}
-  - {fileID: 4237858168127000992}
   - {fileID: 1746721938}
-  - {fileID: 2028822929}
+  - {fileID: 4237858168127000992}
+  - {fileID: 7262062850756028280}
   - {fileID: 1142628583}
+  - {fileID: 2028822929}
   - {fileID: 111370872}
   - {fileID: 1782817520}
 --- !u!50 &2128201541
@@ -1787,6 +1796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5402063505944299716, guid: de0355407cc6744f299988a0375ee4f6, type: 3}
+      propertyPath: ballType
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6169242816125525731, guid: de0355407cc6744f299988a0375ee4f6, type: 3}
       propertyPath: m_Name
       value: redball
@@ -1852,6 +1865,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4096491465008272398, guid: 4439d7ba723114c689dbde7aa73b5ea0, type: 3}
+      propertyPath: balls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8252414253474189513, guid: 4439d7ba723114c689dbde7aa73b5ea0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.27
@@ -2005,6 +2022,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8315489489392708626, guid: caab024aca00c4c7fa58eb83644a1b51, type: 3}
+      propertyPath: ballType
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2918080218462738161, guid: caab024aca00c4c7fa58eb83644a1b51, type: 3}
       propertyPath: m_Material
       value: 
@@ -2346,6 +2367,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1654271051753375331, guid: bf2e79378fab248e8b189a1bf30c56dc, type: 3}
+      propertyPath: ballType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2682313614716252199, guid: bf2e79378fab248e8b189a1bf30c56dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.06
@@ -2477,6 +2502,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1758091889585228397, guid: c988bc65666194faea2dbc47614c8cd4, type: 3}
+      propertyPath: ballType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6059370011359045026, guid: c988bc65666194faea2dbc47614c8cd4, type: 3}
       propertyPath: m_Name
       value: Tennis
@@ -2608,6 +2637,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3219383006018709058, guid: c10262fb04e6a4e53851a949fe7b2785, type: 3}
+      propertyPath: ballType
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4754098188213208139, guid: c10262fb04e6a4e53851a949fe7b2785, type: 3}
       propertyPath: m_Material
       value: 
@@ -2680,6 +2713,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2631452410708196742, guid: 0e6767c16a8d14474a49ef950833f035, type: 3}
+      propertyPath: ballType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5109295670877863513, guid: 0e6767c16a8d14474a49ef950833f035, type: 3}
       propertyPath: m_Name
       value: BowlingBall
@@ -2820,15 +2857,15 @@ SceneRoots:
   - {fileID: 1383797120}
   - {fileID: 720837890}
   - {fileID: 1503445367}
-  - {fileID: 4162900882902672950}
-  - {fileID: 4392677712047195726}
-  - {fileID: 1837398330}
-  - {fileID: 23650617}
+  - {fileID: 4009997439614742923}
   - {fileID: 4257565532067607066}
+  - {fileID: 23650617}
   - {fileID: 4237858168127000991}
   - {fileID: 7262062850756028279}
+  - {fileID: 4392677712047195726}
+  - {fileID: 1837398330}
   - {fileID: 981976984480956514}
-  - {fileID: 4009997439614742923}
+  - {fileID: 4162900882902672950}
   - {fileID: 2128201539}
   - {fileID: 106234446}
   - {fileID: 1479632120}
