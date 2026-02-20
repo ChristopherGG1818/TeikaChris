@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 //whatever bro
 //follow the way the sprites folder to make it easier 
@@ -12,14 +13,19 @@ public class PlayerBehavior : MonoBehaviour{
     public float max;
     public int move;
 
+    public int[] points;
+    public int total;
+    public TMP_Text textField;
+
+
     public GameObject[] balls;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start(){
 
         move =0; // 0 means you can move both ways
+        total =0;
     } 
 
-    // Update is called once per frame
     void Update(){
 
         if(currentball != null){
@@ -89,4 +95,9 @@ public class PlayerBehavior : MonoBehaviour{
         move = 0; // can move left again
         }
     }
+    public void updateScore(int index){
+        total = total + points [index];
+        textField.setText("Score: "+ total);
+    }
+
 }
