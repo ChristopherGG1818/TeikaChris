@@ -34,7 +34,8 @@ public class PlayerBehavior : MonoBehaviour{
             currentball.transform.position = playerPos + ballOffset;
         }
         else{
-            int choice = Random.Range(0, balls.Length);
+            int choice = GameObject.FindGameObjectWithTag("Queue").GetComponent<PlayerBehavior>().balls;
+            //int choice = Random.Range(0, balls.Length);
             currentball  = Instantiate(balls[choice], new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
         }
 
@@ -97,7 +98,7 @@ public class PlayerBehavior : MonoBehaviour{
     }
     public void updateScore(int index){
         total = total + points [index];
-        textField.setText("Score: "+ total);
+        textField.SetText("Score: "+ total);
     }
 
 }

@@ -8,10 +8,13 @@ public class SportBehavior : MonoBehaviour
     public GameObject[] balls;
     public int ballType;
 
+    private AudioSource mergeSource;
+
 
     void Start(){ 
 
         balls = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerBehavior>().balls;
+        mergeSource = GameObject.FindGameObjectWithTag("MergeSound").GetComponent<AudioSource>();
 
     } 
     void Update(){
@@ -27,7 +30,9 @@ public class SportBehavior : MonoBehaviour
                 (gameObject.transform.position.x== other.transform.position.x && gameObject.transform.position.y>= other.transform.position.y)){
                     int choice = ballType+1;
 
+
                     
+
 
 
 
@@ -36,12 +41,17 @@ public class SportBehavior : MonoBehaviour
                     currentball.GetComponent<Rigidbody2D>().gravityScale =1.0f;
 
 
+                    mergeSource.Play();
+
+
                    // GetComponent<AudioSource>()
 
 
                     GameObject.FindGameObjectWithTag("Player").
                     GetComponent<PlayerBehavior>().updateScore(ballType);
 
+
+                    //destroy both fruits.
                     Destroy(other.gameObject);
                     Destroy(gameObject);
 
