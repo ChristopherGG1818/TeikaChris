@@ -1,23 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundManager : MonoBehaviour
 {
-    public GameObject backgroundPrefab;
-    public float speed = 0.05f;       
-    public Vector2 pivot = new Vector2(-10.24f, -10.24f);
+    public GameObject bckPrefab;
+    public float speed;
+    public float scale;
+    private GameObject[] bcks;
+    public float pivotPoint;
 
-    private GameObject[] bcks = new GameObject[3];
-    private Vector2 moveDirection = Vector2.one; 
     void Start()
     {
-       
+        bckPrefab.transform.localScale = new Vector3(scale, scale, scale);
+        pivotPoint = -0.32f * 16 * scale;
+
+        bcks = new GameObject[3];
         for (int i = 0; i < 3; i++)
         {
-            bcks[i] = Instantiate(backgroundPrefab, Vector3.zero, Quaternion.identity);
-            
-            float offsetX = (pivot.x / -2) * i;
-            float offsetY = (pivot.y / -2) * i;
-            bcks[i].transform.position = new Vector3(pivot.x + offsetX, pivot.y + offsetY, 0);
+            float xPos = pivotPoint - (pivotPoint / 2 * i);
+            float yPos = pivotPoint - (pivotPoint / 2 * i);
+            Vector3 pos = new Vector3(xPos, yPos, 0.0f);
+            bcks[i] = Instantiate(bckPrefab, pos, Quaternion.identity);
         }
     }
 
@@ -25,10 +29,15 @@ public class BackgroundManager : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
-            bcks[i].transform.position += (Vector3)(moveDirection * speed * Time.deltaTime);
-            if (bcks[i].transform.position.x > -pivot.x || bcks[i].transform.position.y > -pivot.y)
+            float xPos = bcks[i].transform.position.x + speed;
+            float yPos = bcks[i].transform.position.y + speed;
+            Vector3 newPos = new Vector3(xPos, yPos, 0.0f);
+            bcks[i].transform.position = newPos;
+
+            if (xPos > -pivotPoint / 2)
             {
-                bcks[i].transform.position = new Vector3(pivot.x, pivot.y, 0);
+                Vector3 pivot = new Vector3(pivotPoint, pivotPoint, 0.0f);
+                bcks[i].transform.position = pivot;
             }
         }
     }

@@ -346,7 +346,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.937262, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -696,9 +696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e053fbba2d2d342a987ca8eec27b5a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  backgroundPrefab: {fileID: 7857186745151473497, guid: 7aa5ac7acfe6948989f26a66d33bb327, type: 3}
-  speed: 1
-  pivot: {x: -10.24, y: -10.24}
+  bckPrefab: {fileID: 7207609256251781895, guid: 7aa5ac7acfe6948989f26a66d33bb327, type: 3}
+  speed: 0.01
+  scale: 6
+  pivotPoint: 0
 --- !u!4 &482657192
 Transform:
   m_ObjectHideFlags: 0
@@ -708,7 +709,7 @@ Transform:
   m_GameObject: {fileID: 482657190}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0835, y: 0.22348, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2864,7 +2865,7 @@ PrefabInstance:
     - target: {fileID: -8315489489392708626, guid: caab024aca00c4c7fa58eb83644a1b51, type: 3}
       propertyPath: 'balls.Array.data[0]'
       value: 
-      objectReference: {fileID: 4009997439614742924}
+      objectReference: {fileID: 0}
     - target: {fileID: -8315489489392708626, guid: caab024aca00c4c7fa58eb83644a1b51, type: 3}
       propertyPath: 'balls.Array.data[1]'
       value: 
