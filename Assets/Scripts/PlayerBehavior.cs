@@ -140,13 +140,27 @@ public class PlayerBehavior : MonoBehaviour
             currentball.transform.position =
                 transform.position + offset;
         }
+        // else
+        // {
+        //     // int choice = Random.Range(0, balls.Length);
+        //     // currentball = Instantiate(
+        //     //     balls[choice],
+        //     //     transform.position,
+        //     //     Quaternion.identity);
+
+            
+        // }
         else
         {
-            int choice = Random.Range(0, balls.Length);
+            QueueManager queue =
+            GameObject.FindGameObjectWithTag("Queue")
+            .GetComponent<QueueManager>();
+            int choice = queue.UpdateQueue();
+            
             currentball = Instantiate(
-                balls[choice],
-                transform.position,
-                Quaternion.identity);
+            balls[choice],
+            transform.position,
+            Quaternion.identity);
         }
 
         // drop ball
