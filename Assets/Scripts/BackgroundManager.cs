@@ -20,7 +20,7 @@ public class BackgroundManager : MonoBehaviour
         {
             float xPos = pivotPoint - (pivotPoint / 2 * i);
             float yPos = pivotPoint - (pivotPoint / 2 * i);
-            Vector3 pos = new Vector3(xPos, yPos, 0.0f);
+            Vector3 pos = new Vector3(xPos, yPos, 5.0f);
             bcks[i] = Instantiate(bckPrefab, pos, Quaternion.identity);
         }
     }
@@ -31,7 +31,7 @@ public class BackgroundManager : MonoBehaviour
         {
             float xPos = bcks[i].transform.position.x + speed;
             float yPos = bcks[i].transform.position.y + speed;
-            Vector3 newPos = new Vector3(xPos, yPos, 0.0f);
+            Vector3 newPos = new Vector3(xPos, yPos, 5.0f);
             bcks[i].transform.position = newPos;
 
             if (xPos > -pivotPoint / 2)
